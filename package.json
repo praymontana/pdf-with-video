@@ -1,0 +1,26 @@
+{
+  "name": "pdf-with-video",
+  "version": "1.0.0",
+  "description": "PDF with timecodes linking to positions in videos",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipo-kio/pdf-with-video.git"
+  },
+  "keywords": [
+    "pdf",
+    "video",
+    "latex"
+  ],
+  "author": "Ilya Posov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ipo-kio/pdf-with-video/issues"
+  },
+  "homepage": "https://github.com/ipo-kio/pdf-with-video#readme",
+  "devDependencies": {
+    "pdfjs-dist": "^2.4.456"
+  }
+}
