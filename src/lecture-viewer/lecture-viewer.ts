@@ -13,8 +13,12 @@
  * limitations under the License.
  */
 
-import "pdfjs-dist/build/pdf";
-import "pdfjs-dist/web/pdf_viewer";
+import * as pdfjsLib from "pdfjs-dist";
+import * as pdfViewer from "pdfjs-dist/web/pdf_viewer";
+
+// import * as pdfjsLib from "pdfjs-dist/build/pdf";
+// import pdfjsViewer from "pdfjs-dist/web/pdf_viewer";
+
 import "./lecture-viewer.scss";
 
 if (!pdfjsLib.getDocument || !pdfjsViewer.PDFViewer) {
@@ -29,17 +33,17 @@ let container = document.getElementById("viewerContainer");
 let eventBus = new pdfjsViewer.EventBus();
 
 // (Optionally) enable hyperlinks within PDF files.
-var pdfLinkService = new pdfjsViewer.PDFLinkService({
+let pdfLinkService = new pdfjsViewer.PDFLinkService({
   eventBus: eventBus,
 });
 
 // (Optionally) enable find controller.
-var pdfFindController = new pdfjsViewer.PDFFindController({
+let pdfFindController = new pdfjsViewer.PDFFindController({
   eventBus: eventBus,
   linkService: pdfLinkService,
 });
 
-var pdfViewer = new pdfjsViewer.PDFViewer({
+let pdfViewer = new pdfjsViewer.PDFViewer({
   container: container,
   eventBus: eventBus,
   linkService: pdfLinkService,
@@ -47,7 +51,7 @@ var pdfViewer = new pdfjsViewer.PDFViewer({
 });
 pdfLinkService.setViewer(pdfViewer);
 
-eventBus.on("pagesinit", function () {
+/*eventBus.on("pagesinit", function () {
   // We can use pdfViewer now, e.g. let's change default scale.
   pdfViewer.currentScaleValue = "page-width";
 
@@ -55,15 +59,15 @@ eventBus.on("pagesinit", function () {
   if (SEARCH_FOR) {
     pdfFindController.executeCommand("find", { query: SEARCH_FOR });
   }
-});
+});*/
 
 // Loading document.
-var loadingTask = pdfjsLib.getDocument({
+let loadingTask = pdfjsLib.getDocument({
   url: "../lectures/lecture2.pdf",
-  cMapUrl: "cmaps",
+  cMapUrl: "pdfsjs/cmaps",
   cMapPacked: true
 });
-loadingTask.promise.then(function (pdfDocument) {
+loadingTask.promise.then(function (pdfDocument: PDFDocumentProxy) {
   // Document loaded, specifying document for the viewer and
   // the (optional) linkService.
   pdfViewer.setDocument(pdfDocument);

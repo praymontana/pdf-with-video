@@ -6,5 +6,11 @@ src/lectures/**/*.aux
 src/lectures/**/*.pdf
 src/lectures/**/*.out
 src/lectures/**/*.synctex.gz
+
+src/texmf/**/*.log
+src/texmf/**/*.aux
+src/texmf/**/*.out
+src/texmf/**/*.synctex.gz
+
 lectures
 dist
