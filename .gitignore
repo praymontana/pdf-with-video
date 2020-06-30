@@ -1,2 +1,10 @@
 node_modules
 .idea
+out
+src/lectures/**/*.log
+src/lectures/**/*.aux
+src/lectures/**/*.pdf
+src/lectures/**/*.out
+src/lectures/**/*.synctex.gz
+lectures
+dist

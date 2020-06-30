@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "PDF with timecodes linking to positions in videos",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,14 @@
   },
   "homepage": "https://github.com/ipo-kio/pdf-with-video#readme",
   "devDependencies": {
-    "pdfjs-dist": "^2.4.456"
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.6.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "pdfjs-dist": "^2.4.456",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }

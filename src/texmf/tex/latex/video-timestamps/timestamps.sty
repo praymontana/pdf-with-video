@@ -1,0 +1,18 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{timestamps}[2019/07/04 LaTeX package for video timestamps]
+\RequirePackage{hyperref}
+\RequirePackage{marginnote}
+
+\newcommand{\youtubevideo}[1]{\def\@youtubevideo{#1}\hypersetup{pdfinfo={
+    YouTubeVideoId={#1},
+},
+pdfkeywords={YouTubeVideoId:#1}
+}}
+
+\def\@ts#1:#2#3{#1m#2#3s}
+
+\newcommand{\timestamp}[1]{
+    \marginpar{%
+        \href{https://youtube.com/watch?v=\@youtubevideo\&t=\expandafter\@ts#1}{#1}%
+    }
+}
