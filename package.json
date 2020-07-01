@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ipo-kio/pdf-with-video#readme",
   "devDependencies": {
     "@types/pdfjs-dist": "^2.1.4",
-    "copy-webpack-plugin": "^6.0.2",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
     "loader-utils": "^2.0.0",
     "mini-css-extract-plugin": "^0.9.0",

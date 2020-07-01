@@ -14,16 +14,9 @@
  */
 
 import * as pdfjsLib from "pdfjs-dist";
-import * as pdfViewer from "pdfjs-dist/web/pdf_viewer";
-
-// import * as pdfjsLib from "pdfjs-dist/build/pdf";
-// import pdfjsViewer from "pdfjs-dist/web/pdf_viewer";
+import * as pdfjsViewer from "pdfjs-dist/web/pdf_viewer";
 
 import "./lecture-viewer.scss";
-
-if (!pdfjsLib.getDocument || !pdfjsViewer.PDFViewer) {
-  alert("Please build the pdfjs-dist library using\n  `gulp dist-install`");
-}
 
 // The workerSrc property shall be specified.
 //
@@ -51,15 +44,15 @@ let pdfViewer = new pdfjsViewer.PDFViewer({
 });
 pdfLinkService.setViewer(pdfViewer);
 
-/*eventBus.on("pagesinit", function () {
+// eventBus.on("pagesinit", function () {
   // We can use pdfViewer now, e.g. let's change default scale.
-  pdfViewer.currentScaleValue = "page-width";
-
+  // pdfViewer.currentScaleValue = "page-width";
+  //
   // We can try searching for things.
-  if (SEARCH_FOR) {
-    pdfFindController.executeCommand("find", { query: SEARCH_FOR });
-  }
-});*/
+  // if (SEARCH_FOR) {
+  //   pdfFindController.executeCommand("find", { query: SEARCH_FOR });
+  // }
+// });
 
 // Loading document.
 let loadingTask = pdfjsLib.getDocument({
@@ -67,7 +60,7 @@ let loadingTask = pdfjsLib.getDocument({
   cMapUrl: "pdfsjs/cmaps",
   cMapPacked: true
 });
-loadingTask.promise.then(function (pdfDocument: PDFDocumentProxy) {
+loadingTask.promise.then(function (pdfDocument) {
   // Document loaded, specifying document for the viewer and
   // the (optional) linkService.
   pdfViewer.setDocument(pdfDocument);

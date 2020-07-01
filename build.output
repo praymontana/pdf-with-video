@@ -1,0 +1,602 @@
+
+> pdf-with-video@1.0.0 build /home/ilya/programming/pdf-video/pdf-with-video
+> webpack --display=verbose
+
+config { context: '/home/ilya/programming/pdf-video/pdf-with-video',
+  entry:
+   { 'pdf-worker': './node_modules/pdfjs-dist/build/pdf.worker.js',
+     'lecture-viewer': './src/lecture-viewer/lecture-viewer.ts' },
+  mode: 'development',
+  output:
+   { path: '/home/ilya/programming/pdf-video/pdf-with-video/dist',
+     filename: '[name].js' },
+  plugins:
+   [ CopyPlugin { patterns: [Array], options: {} },
+     MiniCssExtractPlugin { options: [Object] } ],
+  module: { rules: [ [Object], [Object] ] },
+  resolve: { extensions: [ '.ts', '.js' ] },
+  devtool: 'inline-source-map' }
+Hash: c3449c02ec9c7cea6205
+Version: webpack 4.43.0
+Time: 42130ms
+Built at: 01.07.2020 11:51:03
+                                    Asset       Size          Chunks             Chunk Names
+                      lecture-viewer.html  418 bytes                  [emitted]  
+                        lecture-viewer.js   13.9 KiB  lecture-viewer  [emitted]  lecture-viewer
+                            pdf-worker.js   3.32 MiB      pdf-worker  [emitted]  pdf-worker
+               pdfjs/cmaps/78-EUC-H.bcmap   2.35 KiB                  [emitted]  
+               pdfjs/cmaps/78-EUC-V.bcmap  173 bytes                  [emitted]  
+                   pdfjs/cmaps/78-H.bcmap   2.32 KiB                  [emitted]  
+              pdfjs/cmaps/78-RKSJ-H.bcmap   2.34 KiB                  [emitted]  
+              pdfjs/cmaps/78-RKSJ-V.bcmap  173 bytes                  [emitted]  
+                   pdfjs/cmaps/78-V.bcmap  169 bytes                  [emitted]  
+            pdfjs/cmaps/78ms-RKSJ-H.bcmap   2.59 KiB                  [emitted]  
+            pdfjs/cmaps/78ms-RKSJ-V.bcmap  290 bytes                  [emitted]  
+            pdfjs/cmaps/83pv-RKSJ-H.bcmap  905 bytes                  [emitted]  
+            pdfjs/cmaps/90ms-RKSJ-H.bcmap  721 bytes                  [emitted]  
+            pdfjs/cmaps/90ms-RKSJ-V.bcmap  290 bytes                  [emitted]  
+           pdfjs/cmaps/90msp-RKSJ-H.bcmap  715 bytes                  [emitted]  
+           pdfjs/cmaps/90msp-RKSJ-V.bcmap  291 bytes                  [emitted]  
+            pdfjs/cmaps/90pv-RKSJ-H.bcmap  982 bytes                  [emitted]  
+            pdfjs/cmaps/90pv-RKSJ-V.bcmap  260 bytes                  [emitted]  
+                  pdfjs/cmaps/Add-H.bcmap   2.36 KiB                  [emitted]  
+             pdfjs/cmaps/Add-RKSJ-H.bcmap   2.36 KiB                  [emitted]  
+             pdfjs/cmaps/Add-RKSJ-V.bcmap  287 bytes                  [emitted]  
+                  pdfjs/cmaps/Add-V.bcmap  282 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-0.bcmap  317 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-1.bcmap  371 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-2.bcmap  376 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-3.bcmap  401 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-4.bcmap  405 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-5.bcmap  406 bytes                  [emitted]  
+           pdfjs/cmaps/Adobe-CNS1-6.bcmap  406 bytes                  [emitted]  
+        pdfjs/cmaps/Adobe-CNS1-UCS2.bcmap   40.2 KiB                  [emitted]  
+            pdfjs/cmaps/Adobe-GB1-0.bcmap  217 bytes                  [emitted]  
+            pdfjs/cmaps/Adobe-GB1-1.bcmap  250 bytes                  [emitted]  
+            pdfjs/cmaps/Adobe-GB1-2.bcmap  465 bytes                  [emitted]  
+            pdfjs/cmaps/Adobe-GB1-3.bcmap  470 bytes                  [emitted]  
+            pdfjs/cmaps/Adobe-GB1-4.bcmap  601 bytes                  [emitted]  
+            pdfjs/cmaps/Adobe-GB1-5.bcmap  625 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-GB1-UCS2.bcmap   33.2 KiB                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-0.bcmap  225 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-1.bcmap  226 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-2.bcmap  233 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-3.bcmap  242 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-4.bcmap  337 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-5.bcmap  430 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Japan1-6.bcmap  485 bytes                  [emitted]  
+      pdfjs/cmaps/Adobe-Japan1-UCS2.bcmap     40 KiB                  [emitted]  
+         pdfjs/cmaps/Adobe-Korea1-0.bcmap  241 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Korea1-1.bcmap  386 bytes                  [emitted]  
+         pdfjs/cmaps/Adobe-Korea1-2.bcmap  391 bytes                  [emitted]  
+      pdfjs/cmaps/Adobe-Korea1-UCS2.bcmap   22.7 KiB                  [emitted]  
+                   pdfjs/cmaps/B5-H.bcmap   1.06 KiB                  [emitted]  
+                   pdfjs/cmaps/B5-V.bcmap  142 bytes                  [emitted]  
+                 pdfjs/cmaps/B5pc-H.bcmap   1.07 KiB                  [emitted]  
+                 pdfjs/cmaps/B5pc-V.bcmap  144 bytes                  [emitted]  
+              pdfjs/cmaps/CNS-EUC-H.bcmap   1.74 KiB                  [emitted]  
+              pdfjs/cmaps/CNS-EUC-V.bcmap   1.88 KiB                  [emitted]  
+                 pdfjs/cmaps/CNS1-H.bcmap  706 bytes                  [emitted]  
+                 pdfjs/cmaps/CNS1-V.bcmap  143 bytes                  [emitted]  
+                 pdfjs/cmaps/CNS2-H.bcmap  504 bytes                  [emitted]  
+                 pdfjs/cmaps/CNS2-V.bcmap   93 bytes                  [emitted]  
+              pdfjs/cmaps/ETHK-B5-H.bcmap   4.32 KiB                  [emitted]  
+              pdfjs/cmaps/ETHK-B5-V.bcmap  158 bytes                  [emitted]  
+              pdfjs/cmaps/ETen-B5-H.bcmap    1.1 KiB                  [emitted]  
+              pdfjs/cmaps/ETen-B5-V.bcmap  158 bytes                  [emitted]  
+            pdfjs/cmaps/ETenms-B5-H.bcmap  101 bytes                  [emitted]  
+            pdfjs/cmaps/ETenms-B5-V.bcmap  172 bytes                  [emitted]  
+                  pdfjs/cmaps/EUC-H.bcmap  578 bytes                  [emitted]  
+                  pdfjs/cmaps/EUC-V.bcmap  170 bytes                  [emitted]  
+                  pdfjs/cmaps/Ext-H.bcmap   2.48 KiB                  [emitted]  
+             pdfjs/cmaps/Ext-RKSJ-H.bcmap   2.48 KiB                  [emitted]  
+             pdfjs/cmaps/Ext-RKSJ-V.bcmap  218 bytes                  [emitted]  
+                  pdfjs/cmaps/Ext-V.bcmap  215 bytes                  [emitted]  
+               pdfjs/cmaps/GB-EUC-H.bcmap  549 bytes                  [emitted]  
+               pdfjs/cmaps/GB-EUC-V.bcmap  179 bytes                  [emitted]  
+                   pdfjs/cmaps/GB-H.bcmap  528 bytes                  [emitted]  
+                   pdfjs/cmaps/GB-V.bcmap  175 bytes                  [emitted]  
+              pdfjs/cmaps/GBK-EUC-H.bcmap   14.3 KiB                  [emitted]  
+              pdfjs/cmaps/GBK-EUC-V.bcmap  180 bytes                  [emitted]  
+                pdfjs/cmaps/GBK2K-H.bcmap   19.2 KiB                  [emitted]  
+                pdfjs/cmaps/GBK2K-V.bcmap  219 bytes                  [emitted]  
+             pdfjs/cmaps/GBKp-EUC-H.bcmap   14.3 KiB                  [emitted]  
+             pdfjs/cmaps/GBKp-EUC-V.bcmap  181 bytes                  [emitted]  
+              pdfjs/cmaps/GBT-EUC-H.bcmap   7.12 KiB                  [emitted]  
+              pdfjs/cmaps/GBT-EUC-V.bcmap  180 bytes                  [emitted]  
+                  pdfjs/cmaps/GBT-H.bcmap    7.1 KiB                  [emitted]  
+                  pdfjs/cmaps/GBT-V.bcmap  176 bytes                  [emitted]  
+            pdfjs/cmaps/GBTpc-EUC-H.bcmap   7.13 KiB                  [emitted]  
+            pdfjs/cmaps/GBTpc-EUC-V.bcmap  182 bytes                  [emitted]  
+             pdfjs/cmaps/GBpc-EUC-H.bcmap  557 bytes                  [emitted]  
+             pdfjs/cmaps/GBpc-EUC-V.bcmap  181 bytes                  [emitted]  
+                      pdfjs/cmaps/H.bcmap  553 bytes                  [emitted]  
+             pdfjs/cmaps/HKdla-B5-H.bcmap   2.59 KiB                  [emitted]  
+             pdfjs/cmaps/HKdla-B5-V.bcmap  148 bytes                  [emitted]  
+             pdfjs/cmaps/HKdlb-B5-H.bcmap   2.36 KiB                  [emitted]  
+             pdfjs/cmaps/HKdlb-B5-V.bcmap  148 bytes                  [emitted]  
+            pdfjs/cmaps/HKgccs-B5-H.bcmap   2.24 KiB                  [emitted]  
+            pdfjs/cmaps/HKgccs-B5-V.bcmap  149 bytes                  [emitted]  
+            pdfjs/cmaps/HKm314-B5-H.bcmap   1.73 KiB                  [emitted]  
+            pdfjs/cmaps/HKm314-B5-V.bcmap  149 bytes                  [emitted]  
+            pdfjs/cmaps/HKm471-B5-H.bcmap   2.12 KiB                  [emitted]  
+            pdfjs/cmaps/HKm471-B5-V.bcmap  149 bytes                  [emitted]  
+             pdfjs/cmaps/HKscs-B5-H.bcmap   4.33 KiB                  [emitted]  
+             pdfjs/cmaps/HKscs-B5-V.bcmap  159 bytes                  [emitted]  
+                pdfjs/cmaps/Hankaku.bcmap  132 bytes                  [emitted]  
+               pdfjs/cmaps/Hiragana.bcmap  124 bytes                  [emitted]  
+              pdfjs/cmaps/KSC-EUC-H.bcmap    1.8 KiB                  [emitted]  
+              pdfjs/cmaps/KSC-EUC-V.bcmap  164 bytes                  [emitted]  
+                  pdfjs/cmaps/KSC-H.bcmap   1.79 KiB                  [emitted]  
+            pdfjs/cmaps/KSC-Johab-H.bcmap   16.4 KiB                  [emitted]  
+            pdfjs/cmaps/KSC-Johab-V.bcmap  166 bytes                  [emitted]  
+                  pdfjs/cmaps/KSC-V.bcmap  160 bytes                  [emitted]  
+            pdfjs/cmaps/KSCms-UHC-H.bcmap   2.72 KiB                  [emitted]  
+         pdfjs/cmaps/KSCms-UHC-HW-H.bcmap   2.72 KiB                  [emitted]  
+         pdfjs/cmaps/KSCms-UHC-HW-V.bcmap  169 bytes                  [emitted]  
+            pdfjs/cmaps/KSCms-UHC-V.bcmap  166 bytes                  [emitted]  
+            pdfjs/cmaps/KSCpc-EUC-H.bcmap   1.98 KiB                  [emitted]  
+            pdfjs/cmaps/KSCpc-EUC-V.bcmap  166 bytes                  [emitted]  
+               pdfjs/cmaps/Katakana.bcmap  100 bytes                  [emitted]  
+                      pdfjs/cmaps/LICENSE   2.03 KiB                  [emitted]  
+                  pdfjs/cmaps/NWP-H.bcmap    2.7 KiB                  [emitted]  
+                  pdfjs/cmaps/NWP-V.bcmap  252 bytes                  [emitted]  
+                 pdfjs/cmaps/RKSJ-H.bcmap  534 bytes                  [emitted]  
+                 pdfjs/cmaps/RKSJ-V.bcmap  170 bytes                  [emitted]  
+                  pdfjs/cmaps/Roman.bcmap   96 bytes                  [emitted]  
+          pdfjs/cmaps/UniCNS-UCS2-H.bcmap   47.1 KiB                  [emitted]  
+          pdfjs/cmaps/UniCNS-UCS2-V.bcmap  156 bytes                  [emitted]  
+         pdfjs/cmaps/UniCNS-UTF16-H.bcmap   49.2 KiB                  [emitted]  
+         pdfjs/cmaps/UniCNS-UTF16-V.bcmap  156 bytes                  [emitted]  
+         pdfjs/cmaps/UniCNS-UTF32-H.bcmap   51.4 KiB                  [emitted]  
+         pdfjs/cmaps/UniCNS-UTF32-V.bcmap  160 bytes                  [emitted]  
+          pdfjs/cmaps/UniCNS-UTF8-H.bcmap   52.4 KiB                  [emitted]  
+          pdfjs/cmaps/UniCNS-UTF8-V.bcmap  157 bytes                  [emitted]  
+           pdfjs/cmaps/UniGB-UCS2-H.bcmap   42.3 KiB                  [emitted]  
+           pdfjs/cmaps/UniGB-UCS2-V.bcmap  193 bytes                  [emitted]  
+          pdfjs/cmaps/UniGB-UTF16-H.bcmap   43.1 KiB                  [emitted]  
+          pdfjs/cmaps/UniGB-UTF16-V.bcmap  178 bytes                  [emitted]  
+          pdfjs/cmaps/UniGB-UTF32-H.bcmap   44.7 KiB                  [emitted]  
+          pdfjs/cmaps/UniGB-UTF32-V.bcmap  182 bytes                  [emitted]  
+           pdfjs/cmaps/UniGB-UTF8-H.bcmap   45.7 KiB                  [emitted]  
+           pdfjs/cmaps/UniGB-UTF8-V.bcmap  181 bytes                  [emitted]  
+          pdfjs/cmaps/UniJIS-UCS2-H.bcmap   24.8 KiB                  [emitted]  
+       pdfjs/cmaps/UniJIS-UCS2-HW-H.bcmap  119 bytes                  [emitted]  
+       pdfjs/cmaps/UniJIS-UCS2-HW-V.bcmap  680 bytes                  [emitted]  
+          pdfjs/cmaps/UniJIS-UCS2-V.bcmap  664 bytes                  [emitted]  
+         pdfjs/cmaps/UniJIS-UTF16-H.bcmap   38.5 KiB                  [emitted]  
+         pdfjs/cmaps/UniJIS-UTF16-V.bcmap  643 bytes                  [emitted]  
+         pdfjs/cmaps/UniJIS-UTF32-H.bcmap   39.6 KiB                  [emitted]  
+         pdfjs/cmaps/UniJIS-UTF32-V.bcmap  677 bytes                  [emitted]  
+          pdfjs/cmaps/UniJIS-UTF8-H.bcmap   40.7 KiB                  [emitted]  
+          pdfjs/cmaps/UniJIS-UTF8-V.bcmap  678 bytes                  [emitted]  
+     pdfjs/cmaps/UniJIS2004-UTF16-H.bcmap   38.6 KiB                  [emitted]  
+     pdfjs/cmaps/UniJIS2004-UTF16-V.bcmap  647 bytes                  [emitted]  
+     pdfjs/cmaps/UniJIS2004-UTF32-H.bcmap   39.7 KiB                  [emitted]  
+     pdfjs/cmaps/UniJIS2004-UTF32-V.bcmap  681 bytes                  [emitted]  
+      pdfjs/cmaps/UniJIS2004-UTF8-H.bcmap   40.8 KiB                  [emitted]  
+      pdfjs/cmaps/UniJIS2004-UTF8-V.bcmap  682 bytes                  [emitted]  
+    pdfjs/cmaps/UniJISPro-UCS2-HW-V.bcmap  705 bytes                  [emitted]  
+       pdfjs/cmaps/UniJISPro-UCS2-V.bcmap  689 bytes                  [emitted]  
+       pdfjs/cmaps/UniJISPro-UTF8-V.bcmap  726 bytes                  [emitted]  
+    pdfjs/cmaps/UniJISX0213-UTF32-H.bcmap   39.6 KiB                  [emitted]  
+    pdfjs/cmaps/UniJISX0213-UTF32-V.bcmap  684 bytes                  [emitted]  
+pdfjs/cmaps/UniJISX02132004-UTF32-H.bcmap   39.7 KiB                  [emitted]  
+pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap  688 bytes                  [emitted]  
+           pdfjs/cmaps/UniKS-UCS2-H.bcmap   25.2 KiB                  [emitted]  
+           pdfjs/cmaps/UniKS-UCS2-V.bcmap  178 bytes                  [emitted]  
+          pdfjs/cmaps/UniKS-UTF16-H.bcmap   25.7 KiB                  [emitted]  
+          pdfjs/cmaps/UniKS-UTF16-V.bcmap  164 bytes                  [emitted]  
+          pdfjs/cmaps/UniKS-UTF32-H.bcmap   25.8 KiB                  [emitted]  
+          pdfjs/cmaps/UniKS-UTF32-V.bcmap  168 bytes                  [emitted]  
+           pdfjs/cmaps/UniKS-UTF8-H.bcmap   27.1 KiB                  [emitted]  
+           pdfjs/cmaps/UniKS-UTF8-V.bcmap  169 bytes                  [emitted]  
+                      pdfjs/cmaps/V.bcmap  166 bytes                  [emitted]  
+              pdfjs/cmaps/WP-Symbol.bcmap  179 bytes                  [emitted]  
+        pdfjs/images/annotation-check.svg  426 bytes                  [emitted]  
+      pdfjs/images/annotation-comment.svg  899 bytes                  [emitted]  
+         pdfjs/images/annotation-help.svg   2.14 KiB                  [emitted]  
+       pdfjs/images/annotation-insert.svg  418 bytes                  [emitted]  
+          pdfjs/images/annotation-key.svg   1.43 KiB                  [emitted]  
+ pdfjs/images/annotation-newparagraph.svg  437 bytes                  [emitted]  
+       pdfjs/images/annotation-noicon.svg  165 bytes                  [emitted]  
+         pdfjs/images/annotation-note.svg   1.06 KiB                  [emitted]  
+    pdfjs/images/annotation-paragraph.svg   1.13 KiB                  [emitted]  
+            pdfjs/images/loading-icon.gif   2.49 KiB                  [emitted]  
+                  pdfjs/images/shadow.png  290 bytes                  [emitted]  
+                 pdfjs/images/texture.png   2.36 KiB                  [emitted]  
+Entrypoint pdf-worker = pdf-worker.js
+Entrypoint lecture-viewer = lecture-viewer.js
+chunk {lecture-viewer} lecture-viewer.js (lecture-viewer) 2.12 KiB [entry] [rendered]
+    > ./src/lecture-viewer/lecture-viewer.ts lecture-viewer
+ [./src/lecture-viewer/lecture-viewer.ts] 2.12 KiB {lecture-viewer} [depth 0] [built]
+     single entry ./src/lecture-viewer/lecture-viewer.ts  lecture-viewer
+chunk {pdf-worker} pdf-worker.js (pdf-worker) 1.25 MiB [entry] [rendered]
+    > ./node_modules/pdfjs-dist/build/pdf.worker.js pdf-worker
+    2 modules
+
+LOG from webpack.buildChunkGraph.visitModules
+<t> prepare: 2.459495ms
+<t> visiting: 0.612318ms
+
+LOG from copy-webpack-plugin
+    begin globbing '/home/ilya/programming/pdf-video/pdf-with-video/src/lecture-viewer/lecture-viewer.html' with a context of '/home/ilya/programming/pdf-video/pdf-with-video/src/lecture-viewer'
+    begin globbing '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/**/*' with a context of '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps'
+    begin globbing '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/**/*' with a context of '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/src/lecture-viewer/lecture-viewer.html' should write to 'lecture-viewer.html'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-EUC-H.bcmap' should write to 'pdfjs/cmaps/78-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-EUC-V.bcmap' should write to 'pdfjs/cmaps/78-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-H.bcmap' should write to 'pdfjs/cmaps/78-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/78-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/78-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-V.bcmap' should write to 'pdfjs/cmaps/78-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78ms-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/78ms-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78ms-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/78ms-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/83pv-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/83pv-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90ms-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/90ms-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90ms-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/90ms-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90msp-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/90msp-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90msp-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/90msp-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90pv-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/90pv-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90pv-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/90pv-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-H.bcmap' should write to 'pdfjs/cmaps/Add-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/Add-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/Add-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-V.bcmap' should write to 'pdfjs/cmaps/Add-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-0.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-0.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-1.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-1.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-2.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-3.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-3.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-4.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-4.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-5.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-5.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-6.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-6.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-UCS2.bcmap' should write to 'pdfjs/cmaps/Adobe-CNS1-UCS2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-0.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-0.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-1.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-1.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-2.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-3.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-3.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-4.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-4.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-5.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-5.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-UCS2.bcmap' should write to 'pdfjs/cmaps/Adobe-GB1-UCS2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-0.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-0.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-1.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-1.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-2.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-3.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-3.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-4.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-4.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-5.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-5.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-6.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-6.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-UCS2.bcmap' should write to 'pdfjs/cmaps/Adobe-Japan1-UCS2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-0.bcmap' should write to 'pdfjs/cmaps/Adobe-Korea1-0.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-1.bcmap' should write to 'pdfjs/cmaps/Adobe-Korea1-1.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-2.bcmap' should write to 'pdfjs/cmaps/Adobe-Korea1-2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-UCS2.bcmap' should write to 'pdfjs/cmaps/Adobe-Korea1-UCS2.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5-H.bcmap' should write to 'pdfjs/cmaps/B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5-V.bcmap' should write to 'pdfjs/cmaps/B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5pc-H.bcmap' should write to 'pdfjs/cmaps/B5pc-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5pc-V.bcmap' should write to 'pdfjs/cmaps/B5pc-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS-EUC-H.bcmap' should write to 'pdfjs/cmaps/CNS-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS-EUC-V.bcmap' should write to 'pdfjs/cmaps/CNS-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS1-H.bcmap' should write to 'pdfjs/cmaps/CNS1-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS1-V.bcmap' should write to 'pdfjs/cmaps/CNS1-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS2-H.bcmap' should write to 'pdfjs/cmaps/CNS2-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS2-V.bcmap' should write to 'pdfjs/cmaps/CNS2-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETHK-B5-H.bcmap' should write to 'pdfjs/cmaps/ETHK-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETHK-B5-V.bcmap' should write to 'pdfjs/cmaps/ETHK-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETen-B5-H.bcmap' should write to 'pdfjs/cmaps/ETen-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETen-B5-V.bcmap' should write to 'pdfjs/cmaps/ETen-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETenms-B5-H.bcmap' should write to 'pdfjs/cmaps/ETenms-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETenms-B5-V.bcmap' should write to 'pdfjs/cmaps/ETenms-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/EUC-H.bcmap' should write to 'pdfjs/cmaps/EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/EUC-V.bcmap' should write to 'pdfjs/cmaps/EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-H.bcmap' should write to 'pdfjs/cmaps/Ext-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-RKSJ-H.bcmap' should write to 'pdfjs/cmaps/Ext-RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-RKSJ-V.bcmap' should write to 'pdfjs/cmaps/Ext-RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-V.bcmap' should write to 'pdfjs/cmaps/Ext-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-EUC-H.bcmap' should write to 'pdfjs/cmaps/GB-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-EUC-V.bcmap' should write to 'pdfjs/cmaps/GB-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-H.bcmap' should write to 'pdfjs/cmaps/GB-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-V.bcmap' should write to 'pdfjs/cmaps/GB-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK-EUC-H.bcmap' should write to 'pdfjs/cmaps/GBK-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK-EUC-V.bcmap' should write to 'pdfjs/cmaps/GBK-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK2K-H.bcmap' should write to 'pdfjs/cmaps/GBK2K-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK2K-V.bcmap' should write to 'pdfjs/cmaps/GBK2K-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBKp-EUC-H.bcmap' should write to 'pdfjs/cmaps/GBKp-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBKp-EUC-V.bcmap' should write to 'pdfjs/cmaps/GBKp-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-EUC-H.bcmap' should write to 'pdfjs/cmaps/GBT-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-EUC-V.bcmap' should write to 'pdfjs/cmaps/GBT-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-H.bcmap' should write to 'pdfjs/cmaps/GBT-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-V.bcmap' should write to 'pdfjs/cmaps/GBT-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBTpc-EUC-H.bcmap' should write to 'pdfjs/cmaps/GBTpc-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBTpc-EUC-V.bcmap' should write to 'pdfjs/cmaps/GBTpc-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBpc-EUC-H.bcmap' should write to 'pdfjs/cmaps/GBpc-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBpc-EUC-V.bcmap' should write to 'pdfjs/cmaps/GBpc-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/H.bcmap' should write to 'pdfjs/cmaps/H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdla-B5-H.bcmap' should write to 'pdfjs/cmaps/HKdla-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdla-B5-V.bcmap' should write to 'pdfjs/cmaps/HKdla-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdlb-B5-H.bcmap' should write to 'pdfjs/cmaps/HKdlb-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdlb-B5-V.bcmap' should write to 'pdfjs/cmaps/HKdlb-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKgccs-B5-H.bcmap' should write to 'pdfjs/cmaps/HKgccs-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKgccs-B5-V.bcmap' should write to 'pdfjs/cmaps/HKgccs-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm314-B5-H.bcmap' should write to 'pdfjs/cmaps/HKm314-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm314-B5-V.bcmap' should write to 'pdfjs/cmaps/HKm314-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm471-B5-H.bcmap' should write to 'pdfjs/cmaps/HKm471-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm471-B5-V.bcmap' should write to 'pdfjs/cmaps/HKm471-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKscs-B5-H.bcmap' should write to 'pdfjs/cmaps/HKscs-B5-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKscs-B5-V.bcmap' should write to 'pdfjs/cmaps/HKscs-B5-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Hankaku.bcmap' should write to 'pdfjs/cmaps/Hankaku.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Hiragana.bcmap' should write to 'pdfjs/cmaps/Hiragana.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-EUC-H.bcmap' should write to 'pdfjs/cmaps/KSC-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-EUC-V.bcmap' should write to 'pdfjs/cmaps/KSC-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-H.bcmap' should write to 'pdfjs/cmaps/KSC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-Johab-H.bcmap' should write to 'pdfjs/cmaps/KSC-Johab-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-Johab-V.bcmap' should write to 'pdfjs/cmaps/KSC-Johab-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-V.bcmap' should write to 'pdfjs/cmaps/KSC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-H.bcmap' should write to 'pdfjs/cmaps/KSCms-UHC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-HW-H.bcmap' should write to 'pdfjs/cmaps/KSCms-UHC-HW-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-HW-V.bcmap' should write to 'pdfjs/cmaps/KSCms-UHC-HW-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-V.bcmap' should write to 'pdfjs/cmaps/KSCms-UHC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCpc-EUC-H.bcmap' should write to 'pdfjs/cmaps/KSCpc-EUC-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCpc-EUC-V.bcmap' should write to 'pdfjs/cmaps/KSCpc-EUC-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Katakana.bcmap' should write to 'pdfjs/cmaps/Katakana.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/LICENSE' should write to 'pdfjs/cmaps/LICENSE'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/NWP-H.bcmap' should write to 'pdfjs/cmaps/NWP-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/NWP-V.bcmap' should write to 'pdfjs/cmaps/NWP-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/RKSJ-H.bcmap' should write to 'pdfjs/cmaps/RKSJ-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/RKSJ-V.bcmap' should write to 'pdfjs/cmaps/RKSJ-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Roman.bcmap' should write to 'pdfjs/cmaps/Roman.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UCS2-H.bcmap' should write to 'pdfjs/cmaps/UniCNS-UCS2-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UCS2-V.bcmap' should write to 'pdfjs/cmaps/UniCNS-UCS2-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF16-H.bcmap' should write to 'pdfjs/cmaps/UniCNS-UTF16-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF16-V.bcmap' should write to 'pdfjs/cmaps/UniCNS-UTF16-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniCNS-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniCNS-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF8-H.bcmap' should write to 'pdfjs/cmaps/UniCNS-UTF8-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF8-V.bcmap' should write to 'pdfjs/cmaps/UniCNS-UTF8-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UCS2-H.bcmap' should write to 'pdfjs/cmaps/UniGB-UCS2-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UCS2-V.bcmap' should write to 'pdfjs/cmaps/UniGB-UCS2-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF16-H.bcmap' should write to 'pdfjs/cmaps/UniGB-UTF16-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF16-V.bcmap' should write to 'pdfjs/cmaps/UniGB-UTF16-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniGB-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniGB-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF8-H.bcmap' should write to 'pdfjs/cmaps/UniGB-UTF8-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF8-V.bcmap' should write to 'pdfjs/cmaps/UniGB-UTF8-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-H.bcmap' should write to 'pdfjs/cmaps/UniJIS-UCS2-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-HW-H.bcmap' should write to 'pdfjs/cmaps/UniJIS-UCS2-HW-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-HW-V.bcmap' should write to 'pdfjs/cmaps/UniJIS-UCS2-HW-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-V.bcmap' should write to 'pdfjs/cmaps/UniJIS-UCS2-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF16-H.bcmap' should write to 'pdfjs/cmaps/UniJIS-UTF16-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF16-V.bcmap' should write to 'pdfjs/cmaps/UniJIS-UTF16-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniJIS-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniJIS-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF8-H.bcmap' should write to 'pdfjs/cmaps/UniJIS-UTF8-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF8-V.bcmap' should write to 'pdfjs/cmaps/UniJIS-UTF8-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF16-H.bcmap' should write to 'pdfjs/cmaps/UniJIS2004-UTF16-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF16-V.bcmap' should write to 'pdfjs/cmaps/UniJIS2004-UTF16-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniJIS2004-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniJIS2004-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF8-H.bcmap' should write to 'pdfjs/cmaps/UniJIS2004-UTF8-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF8-V.bcmap' should write to 'pdfjs/cmaps/UniJIS2004-UTF8-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISPro-UCS2-HW-V.bcmap' should write to 'pdfjs/cmaps/UniJISPro-UCS2-HW-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISPro-UCS2-V.bcmap' should write to 'pdfjs/cmaps/UniJISPro-UCS2-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISPro-UTF8-V.bcmap' should write to 'pdfjs/cmaps/UniJISPro-UTF8-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX0213-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniJISX0213-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX0213-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniJISX0213-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX02132004-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniJISX02132004-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX02132004-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UCS2-H.bcmap' should write to 'pdfjs/cmaps/UniKS-UCS2-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UCS2-V.bcmap' should write to 'pdfjs/cmaps/UniKS-UCS2-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF16-H.bcmap' should write to 'pdfjs/cmaps/UniKS-UTF16-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF16-V.bcmap' should write to 'pdfjs/cmaps/UniKS-UTF16-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF32-H.bcmap' should write to 'pdfjs/cmaps/UniKS-UTF32-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF32-V.bcmap' should write to 'pdfjs/cmaps/UniKS-UTF32-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF8-H.bcmap' should write to 'pdfjs/cmaps/UniKS-UTF8-H.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF8-V.bcmap' should write to 'pdfjs/cmaps/UniKS-UTF8-V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/V.bcmap' should write to 'pdfjs/cmaps/V.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/WP-Symbol.bcmap' should write to 'pdfjs/cmaps/WP-Symbol.bcmap'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-check.svg' should write to 'pdfjs/images/annotation-check.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-comment.svg' should write to 'pdfjs/images/annotation-comment.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-help.svg' should write to 'pdfjs/images/annotation-help.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-insert.svg' should write to 'pdfjs/images/annotation-insert.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-key.svg' should write to 'pdfjs/images/annotation-key.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-newparagraph.svg' should write to 'pdfjs/images/annotation-newparagraph.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-noicon.svg' should write to 'pdfjs/images/annotation-noicon.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-note.svg' should write to 'pdfjs/images/annotation-note.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-paragraph.svg' should write to 'pdfjs/images/annotation-paragraph.svg'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/loading-icon.gif' should write to 'pdfjs/images/loading-icon.gif'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/shadow.png' should write to 'pdfjs/images/shadow.png'
+    determined that '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/texture.png' should write to 'pdfjs/images/texture.png'
+    writing 'lecture-viewer.html' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/src/lecture-viewer/lecture-viewer.html'
+    writing 'pdfjs/cmaps/78-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/78-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/78-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-H.bcmap'
+    writing 'pdfjs/cmaps/78-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/78-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/78-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78-V.bcmap'
+    writing 'pdfjs/cmaps/78ms-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78ms-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/78ms-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/78ms-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/83pv-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/83pv-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/90ms-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90ms-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/90ms-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90ms-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/90msp-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90msp-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/90msp-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90msp-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/90pv-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90pv-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/90pv-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/90pv-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/Add-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-H.bcmap'
+    writing 'pdfjs/cmaps/Add-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/Add-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/Add-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Add-V.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-0.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-0.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-1.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-1.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-3.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-3.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-4.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-4.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-5.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-5.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-6.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-6.bcmap'
+    writing 'pdfjs/cmaps/Adobe-CNS1-UCS2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-CNS1-UCS2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-0.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-0.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-1.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-1.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-3.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-3.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-4.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-4.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-5.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-5.bcmap'
+    writing 'pdfjs/cmaps/Adobe-GB1-UCS2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-GB1-UCS2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-0.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-0.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-1.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-1.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-3.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-3.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-4.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-4.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-5.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-5.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-6.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-6.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Japan1-UCS2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Japan1-UCS2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Korea1-0.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-0.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Korea1-1.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-1.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Korea1-2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-2.bcmap'
+    writing 'pdfjs/cmaps/Adobe-Korea1-UCS2.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Adobe-Korea1-UCS2.bcmap'
+    writing 'pdfjs/cmaps/B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5-H.bcmap'
+    writing 'pdfjs/cmaps/B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5-V.bcmap'
+    writing 'pdfjs/cmaps/B5pc-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5pc-H.bcmap'
+    writing 'pdfjs/cmaps/B5pc-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/B5pc-V.bcmap'
+    writing 'pdfjs/cmaps/CNS-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/CNS-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/CNS1-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS1-H.bcmap'
+    writing 'pdfjs/cmaps/CNS1-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS1-V.bcmap'
+    writing 'pdfjs/cmaps/CNS2-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS2-H.bcmap'
+    writing 'pdfjs/cmaps/CNS2-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/CNS2-V.bcmap'
+    writing 'pdfjs/cmaps/ETHK-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETHK-B5-H.bcmap'
+    writing 'pdfjs/cmaps/ETHK-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETHK-B5-V.bcmap'
+    writing 'pdfjs/cmaps/ETen-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETen-B5-H.bcmap'
+    writing 'pdfjs/cmaps/ETen-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETen-B5-V.bcmap'
+    writing 'pdfjs/cmaps/ETenms-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETenms-B5-H.bcmap'
+    writing 'pdfjs/cmaps/ETenms-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/ETenms-B5-V.bcmap'
+    writing 'pdfjs/cmaps/EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/EUC-H.bcmap'
+    writing 'pdfjs/cmaps/EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/EUC-V.bcmap'
+    writing 'pdfjs/cmaps/Ext-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-H.bcmap'
+    writing 'pdfjs/cmaps/Ext-RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/Ext-RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/Ext-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Ext-V.bcmap'
+    writing 'pdfjs/cmaps/GB-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/GB-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/GB-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-H.bcmap'
+    writing 'pdfjs/cmaps/GB-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GB-V.bcmap'
+    writing 'pdfjs/cmaps/GBK-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/GBK-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/GBK2K-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK2K-H.bcmap'
+    writing 'pdfjs/cmaps/GBK2K-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBK2K-V.bcmap'
+    writing 'pdfjs/cmaps/GBKp-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBKp-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/GBKp-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBKp-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/GBT-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/GBT-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/GBT-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-H.bcmap'
+    writing 'pdfjs/cmaps/GBT-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBT-V.bcmap'
+    writing 'pdfjs/cmaps/GBTpc-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBTpc-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/GBTpc-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBTpc-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/GBpc-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBpc-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/GBpc-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/GBpc-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/H.bcmap'
+    writing 'pdfjs/cmaps/HKdla-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdla-B5-H.bcmap'
+    writing 'pdfjs/cmaps/HKdla-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdla-B5-V.bcmap'
+    writing 'pdfjs/cmaps/HKdlb-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdlb-B5-H.bcmap'
+    writing 'pdfjs/cmaps/HKdlb-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKdlb-B5-V.bcmap'
+    writing 'pdfjs/cmaps/HKgccs-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKgccs-B5-H.bcmap'
+    writing 'pdfjs/cmaps/HKgccs-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKgccs-B5-V.bcmap'
+    writing 'pdfjs/cmaps/HKm314-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm314-B5-H.bcmap'
+    writing 'pdfjs/cmaps/HKm314-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm314-B5-V.bcmap'
+    writing 'pdfjs/cmaps/HKm471-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm471-B5-H.bcmap'
+    writing 'pdfjs/cmaps/HKm471-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKm471-B5-V.bcmap'
+    writing 'pdfjs/cmaps/HKscs-B5-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKscs-B5-H.bcmap'
+    writing 'pdfjs/cmaps/HKscs-B5-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/HKscs-B5-V.bcmap'
+    writing 'pdfjs/cmaps/Hankaku.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Hankaku.bcmap'
+    writing 'pdfjs/cmaps/Hiragana.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Hiragana.bcmap'
+    writing 'pdfjs/cmaps/KSC-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/KSC-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/KSC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-H.bcmap'
+    writing 'pdfjs/cmaps/KSC-Johab-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-Johab-H.bcmap'
+    writing 'pdfjs/cmaps/KSC-Johab-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-Johab-V.bcmap'
+    writing 'pdfjs/cmaps/KSC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSC-V.bcmap'
+    writing 'pdfjs/cmaps/KSCms-UHC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-H.bcmap'
+    writing 'pdfjs/cmaps/KSCms-UHC-HW-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-HW-H.bcmap'
+    writing 'pdfjs/cmaps/KSCms-UHC-HW-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-HW-V.bcmap'
+    writing 'pdfjs/cmaps/KSCms-UHC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCms-UHC-V.bcmap'
+    writing 'pdfjs/cmaps/KSCpc-EUC-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCpc-EUC-H.bcmap'
+    writing 'pdfjs/cmaps/KSCpc-EUC-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/KSCpc-EUC-V.bcmap'
+    writing 'pdfjs/cmaps/Katakana.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Katakana.bcmap'
+    writing 'pdfjs/cmaps/LICENSE' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/LICENSE'
+    writing 'pdfjs/cmaps/NWP-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/NWP-H.bcmap'
+    writing 'pdfjs/cmaps/NWP-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/NWP-V.bcmap'
+    writing 'pdfjs/cmaps/RKSJ-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/RKSJ-H.bcmap'
+    writing 'pdfjs/cmaps/RKSJ-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/RKSJ-V.bcmap'
+    writing 'pdfjs/cmaps/Roman.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/Roman.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UCS2-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UCS2-H.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UCS2-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UCS2-V.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UTF16-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF16-H.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UTF16-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF16-V.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UTF8-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF8-H.bcmap'
+    writing 'pdfjs/cmaps/UniCNS-UTF8-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniCNS-UTF8-V.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UCS2-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UCS2-H.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UCS2-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UCS2-V.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UTF16-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF16-H.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UTF16-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF16-V.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UTF8-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF8-H.bcmap'
+    writing 'pdfjs/cmaps/UniGB-UTF8-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniGB-UTF8-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UCS2-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UCS2-HW-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-HW-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UCS2-HW-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-HW-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UCS2-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UCS2-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UTF16-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF16-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UTF16-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF16-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UTF8-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF8-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS-UTF8-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS-UTF8-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS2004-UTF16-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF16-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS2004-UTF16-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF16-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS2004-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS2004-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniJIS2004-UTF8-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF8-H.bcmap'
+    writing 'pdfjs/cmaps/UniJIS2004-UTF8-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJIS2004-UTF8-V.bcmap'
+    writing 'pdfjs/cmaps/UniJISPro-UCS2-HW-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISPro-UCS2-HW-V.bcmap'
+    writing 'pdfjs/cmaps/UniJISPro-UCS2-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISPro-UCS2-V.bcmap'
+    writing 'pdfjs/cmaps/UniJISPro-UTF8-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISPro-UTF8-V.bcmap'
+    writing 'pdfjs/cmaps/UniJISX0213-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX0213-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniJISX0213-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX0213-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniJISX02132004-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX02132004-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniJISX02132004-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UCS2-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UCS2-H.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UCS2-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UCS2-V.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UTF16-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF16-H.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UTF16-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF16-V.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UTF32-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF32-H.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UTF32-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF32-V.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UTF8-H.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF8-H.bcmap'
+    writing 'pdfjs/cmaps/UniKS-UTF8-V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/UniKS-UTF8-V.bcmap'
+    writing 'pdfjs/cmaps/V.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/V.bcmap'
+    writing 'pdfjs/cmaps/WP-Symbol.bcmap' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/cmaps/WP-Symbol.bcmap'
+    writing 'pdfjs/images/annotation-check.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-check.svg'
+    writing 'pdfjs/images/annotation-comment.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-comment.svg'
+    writing 'pdfjs/images/annotation-help.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-help.svg'
+    writing 'pdfjs/images/annotation-insert.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-insert.svg'
+    writing 'pdfjs/images/annotation-key.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-key.svg'
+    writing 'pdfjs/images/annotation-newparagraph.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-newparagraph.svg'
+    writing 'pdfjs/images/annotation-noicon.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-noicon.svg'
+    writing 'pdfjs/images/annotation-note.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-note.svg'
+    writing 'pdfjs/images/annotation-paragraph.svg' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/annotation-paragraph.svg'
+    writing 'pdfjs/images/loading-icon.gif' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/loading-icon.gif'
+    writing 'pdfjs/images/shadow.png' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/shadow.png'
+    writing 'pdfjs/images/texture.png' to compilation assets from '/home/ilya/programming/pdf-video/pdf-with-video/node_modules/pdfjs-dist/web/images/texture.png'
++ 378 hidden lines
+
+ERROR in /home/ilya/programming/pdf-video/pdf-with-video/node_modules/jest-worker/build/index.js
+[tsl] ERROR in /home/ilya/programming/pdf-video/pdf-with-video/node_modules/jest-worker/build/index.js(47,7)
+      TS2578: Unused '@ts-expect-error' directive.
+
+ERROR in /home/ilya/programming/pdf-video/pdf-with-video/node_modules/jest-worker/build/index.js
+[tsl] ERROR in /home/ilya/programming/pdf-video/pdf-with-video/node_modules/jest-worker/build/index.js(106,7)
+      TS2578: Unused '@ts-expect-error' directive.
+
+ERROR in /home/ilya/programming/pdf-video/pdf-with-video/node_modules/jest-worker/build/index.js
+[tsl] ERROR in /home/ilya/programming/pdf-video/pdf-with-video/node_modules/jest-worker/build/index.js(132,9)
+      TS2578: Unused '@ts-expect-error' directive.
