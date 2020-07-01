@@ -17,6 +17,48 @@ import * as pdfjsLib from "pdfjs-dist";
 import * as pdfjsViewer from "pdfjs-dist/web/pdf_viewer";
 
 import "./lecture-viewer.scss";
+import {PDFViewerParams} from "pdfjs-dist";
+
+import {Callback, global_queue} from "./loading_queue"
+import {load_player_api, Player} from "./player";
+
+document.addEventListener("DOMContentLoaded", ready);
+
+function ready() {
+
+// setup url for iframe
+
+  let pdf_viewer = document.getElementById('pdf-viewer');
+  let url = new URL(window.location.toString());
+  let pdfName = url.searchParams.get("pdf");
+
+  let youtube_video_specified: Callback = global_queue.new_callback();
+  let youtube_video_id: string = null;
+  let player: Player = null;
+
+  window.addEventListener('message', e => {
+    let message = e.data;
+    if (message.type === 'video_id') {
+      youtube_video_id = message.id;
+      youtube_video_specified();
+      console.log('video id specified:', youtube_video_id);
+    } else if (message.type === 'goto_time') {
+      let url = message.url;
+      let m = url.match(/(\d+)m(\d+)s/);
+      if (!m)
+        return;
+      let min = +m[1];
+      let sec = +m[2];
+      player.goto(min * 60 + sec);
+    }
+  });
+
+  load_player_api();
+
+  global_queue.finished_loading_callback = () => {
+    player = new Player(youtube_video_id);
+  };
+}
 
 // The workerSrc property shall be specified.
 //
