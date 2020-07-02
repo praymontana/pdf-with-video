@@ -1,4 +1,4 @@
-export async function load_player_api() {
+export async function load_player_api(): Promise<void> {
     return new Promise((resolve, reject) => {
         const tag = document.createElement('script');
 
@@ -10,12 +10,11 @@ export async function load_player_api() {
     });
 }
 
-export class Player {
-
+export class VideoPlayer {
     player: YT.Player;
 
-    constructor(video_id: string) {
-        this.player = new YT.Player('youtube-player', {
+    constructor(video_id: string, element_id: string) {
+        this.player = new YT.Player(element_id, {
             height: '360',
             width: '640',
             videoId: video_id,

@@ -15,11 +15,16 @@ body, html {
   width: 100%;
   height: 100%;
 
-  #videoPlayer {
+  #videoPlayerContainer {
     background-color: rgb(195, 162, 231);
     flex-grow: 0;
     width: 100%;
-    min-height: 300px;
+    min-height: 360px;
+  }
+
+  #videoPlayer {
+    width: 640px;
+    height: 360px;
   }
 
   #viewerContainer {

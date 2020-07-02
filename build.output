@@ -5,7 +5,7 @@
 config { context: '/home/ilya/programming/pdf-video/pdf-with-video',
   entry:
    { 'pdf-worker': './node_modules/pdfjs-dist/build/pdf.worker.js',
-     'lecture-viewer': './src/lecture-viewer/lecture-viewer.ts' },
+     'lecture-viewer': './src/lecture-viewer/lecture-notes-and-video-viewer.ts' },
   mode: 'development',
   output:
    { path: '/home/ilya/programming/pdf-video/pdf-with-video/dist',
@@ -208,9 +208,9 @@ pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap  688 bytes                  [emitted]
 Entrypoint pdf-worker = pdf-worker.js
 Entrypoint lecture-viewer = lecture-viewer.js
 chunk {lecture-viewer} lecture-viewer.js (lecture-viewer) 2.12 KiB [entry] [rendered]
-    > ./src/lecture-viewer/lecture-viewer.ts lecture-viewer
- [./src/lecture-viewer/lecture-viewer.ts] 2.12 KiB {lecture-viewer} [depth 0] [built]
-     single entry ./src/lecture-viewer/lecture-viewer.ts  lecture-viewer
+    > ./src/lecture-viewer/lecture-notes-and-video-viewer.ts lecture-viewer
+ [./src/lecture-viewer/lecture-notes-and-video-viewer.ts] 2.12 KiB {lecture-viewer} [depth 0] [built]
+     single entry ./src/lecture-viewer/lecture-notes-and-video-viewer.ts  lecture-viewer
 chunk {pdf-worker} pdf-worker.js (pdf-worker) 1.25 MiB [entry] [rendered]
     > ./node_modules/pdfjs-dist/build/pdf.worker.js pdf-worker
     2 modules

@@ -6,7 +6,7 @@
     "module": "es6",
     "target": "es5",
     "allowSyntheticDefaultImports": true,
-    "lib": ["ES2015.Promise"]
+    "lib": ["ES2015"]
   },
   "exclude": [
     "node_modules"

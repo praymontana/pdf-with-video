@@ -10,7 +10,7 @@ let base_config = {
     context: __dirname,
     entry: {
         'pdf-worker': './node_modules/pdfjs-dist/build/pdf.worker.js',
-        'lecture-viewer': './src/lecture-viewer/lecture-viewer.ts',
+        'lecture-viewer': './src/lecture-viewer/ts/lecture-notes-and-video-viewer.ts',
     },
     mode: 'none',
     output: {

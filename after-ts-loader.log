@@ -37,7 +37,7 @@ let pdfFindController = new pdfjsViewer.PDFFindController({
   linkService: pdfLinkService,
 });
 
-let pdfViewer = new pdfjsViewer.PDFViewer({
+let pdfViewer = new pdfjsViewer.LectureNotesViewer({
   container: container,
   eventBus: eventBus,
   linkService: pdfLinkService,
@@ -109,7 +109,7 @@ let pdfFindController = new pdfjsViewer.PDFFindController({
   linkService: pdfLinkService,
 });
 
-let pdfViewer = new pdfjsViewer.PDFViewer({
+let pdfViewer = new pdfjsViewer.LectureNotesViewer({
   container: container,
   eventBus: eventBus,
   linkService: pdfLinkService,
