@@ -31,7 +31,10 @@ body, html {
     background-color: rgb(128, 128, 128);
     flex-grow: 1;
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
   }
 
+  #viewer {
+    overflow: hidden;
+  }
 }
