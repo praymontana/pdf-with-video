@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lecture-notes}[2019/07/04 LaTeX class for lecture notes]
-\LoadClass[a4paper,12pt]{report}
+\LoadClass[a4paper,12pt]{article}
 
 \newif\if@russian
 

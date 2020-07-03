@@ -27,6 +27,7 @@ export class LectureNotesViewer {
             linkService: pdfLinkService,
             findController: pdfFindController,
         });
+        //TODO сделать завтра pdfViewer.createAnnotationLayerBuilder
 
         pdfLinkService.setViewer(pdfViewer);
 
