@@ -4,6 +4,38 @@ import * as pdfjsViewer from "pdfjs-dist/web/pdf_viewer";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = "pdf-worker.js";
 
+interface YoutubeLink {
+    time: number;
+    video_id: string;
+}
+
+function parse_video_link(url: string): YoutubeLink | null {
+    let m: RegExpMatchArray = url.match('^https://youtube.com/watch\\?v=(.*)&t=((\\d+)h)?(\\d+)m(\\d+)s$');
+
+    if (!m)
+        return null;
+
+    let hours: number = m[3] ? +m[3] : 0;
+    let minutes: number = m[4] ? +m[4] : 0;
+    let seconds: number = m[5] ? +m[5] : 0;
+
+    return {
+        video_id: m[1],
+        time: hours * 60 * 60 + minutes * 60 + seconds
+    };
+}
+
+let AnnotationLayer = (<any>pdfjsLib).AnnotationLayer;
+let old_annotations_renderer = AnnotationLayer.render;
+AnnotationLayer.render = (parameters:any) => {
+    for (let annotation of parameters.annotations) {
+        let video_link = parse_video_link(annotation.url);
+        if (video_link)
+            annotation.url = `javascript:goto_video_position('${video_link.video_id}', ${video_link.time})`;
+    }
+    old_annotations_renderer(parameters);
+};
+
 export class LectureNotesViewer {
     constructor(pdf_document: PDFDocumentProxy, element_id: string) {
         let container = document.getElementById(element_id);
@@ -27,7 +59,6 @@ export class LectureNotesViewer {
             linkService: pdfLinkService,
             findController: pdfFindController,
         });
-        //TODO сделать завтра pdfViewer.createAnnotationLayerBuilder
 
         pdfLinkService.setViewer(pdfViewer);
 
