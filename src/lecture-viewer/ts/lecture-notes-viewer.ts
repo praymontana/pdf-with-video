@@ -1,6 +1,7 @@
 import * as pdfjsLib from "pdfjs-dist";
 import {PDFDocumentProxy} from "pdfjs-dist";
 import * as pdfjsViewer from "pdfjs-dist/web/pdf_viewer";
+import {VideoPlayer} from "./video-player";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = "pdf-worker.js";
 
@@ -10,6 +11,9 @@ interface YoutubeLink {
 }
 
 function parse_video_link(url: string): YoutubeLink | null {
+    if (!url)
+        return null;
+
     let m: RegExpMatchArray = url.match('^https://youtube.com/watch\\?v=(.*)&t=((\\d+)h)?(\\d+)m(\\d+)s$');
 
     if (!m)
@@ -37,8 +41,11 @@ AnnotationLayer.render = (parameters: any) => {
 };
 
 export class LectureNotesViewer {
-    constructor(pdf_document: PDFDocumentProxy, youtube_video_id: string, element_id: string) {
-        window.video_clicks_event_source.subscribe(youtube_video_id, /*TODO callback here*/);
+    constructor(pdf_document: PDFDocumentProxy, youtube_video_id: string, video_player: VideoPlayer, element_id: string) {
+        window.video_clicks_event_source.subscribe(
+            youtube_video_id,
+            time => video_player.goto(time)
+        );
 
         let container = document.getElementById(element_id);
 
