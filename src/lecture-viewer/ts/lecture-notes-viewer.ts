@@ -27,17 +27,19 @@ function parse_video_link(url: string): YoutubeLink | null {
 
 let AnnotationLayer = (<any>pdfjsLib).AnnotationLayer;
 let old_annotations_renderer = AnnotationLayer.render;
-AnnotationLayer.render = (parameters:any) => {
+AnnotationLayer.render = (parameters: any) => {
     for (let annotation of parameters.annotations) {
         let video_link = parse_video_link(annotation.url);
         if (video_link)
-            annotation.url = `javascript:goto_video_position('${video_link.video_id}', ${video_link.time})`;
+            annotation.url = `javascript:window.video_clicks_event_source.fire('${video_link.video_id}', ${video_link.time})`;
     }
     old_annotations_renderer(parameters);
 };
 
 export class LectureNotesViewer {
-    constructor(pdf_document: PDFDocumentProxy, element_id: string) {
+    constructor(pdf_document: PDFDocumentProxy, youtube_video_id: string, element_id: string) {
+        window.video_clicks_event_source.subscribe(youtube_video_id, /*TODO callback here*/);
+
         let container = document.getElementById(element_id);
 
         let eventBus = new pdfjsViewer.EventBus();

@@ -16,6 +16,6 @@ async function ready() {
     let [_, lecture_notes] = await Promise.all([load_youtube_api_promise, load_pdf_document_promise]);
 
     let player = new VideoPlayer(lecture_notes.youtube_video_id, 'videoPlayer');
-    let pdf_viewer = new LectureNotesViewer(lecture_notes.pdf_document, 'viewerContainer');
+    let pdf_viewer = new LectureNotesViewer(lecture_notes.pdf_document, lecture_notes.youtube_video_id, 'viewerContainer');
 }
 
