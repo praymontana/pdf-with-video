@@ -12,5 +12,7 @@ src/texmf/**/*.aux
 src/texmf/**/*.out
 src/texmf/**/*.synctex.gz
 
+src/**/svg-inkscape
+
 lectures
 dist
