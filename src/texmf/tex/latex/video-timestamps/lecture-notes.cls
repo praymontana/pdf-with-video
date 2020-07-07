@@ -12,7 +12,6 @@
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[russian]{babel}
-\RequirePackage{etoolbox}
 
 % добавить точку после номера теоремы. LaTeX в примерах http://www.ccas.ru/voron/download/voron05latex.pdf
 \renewcommand{\@begintheorem}[2]{\par{\bf #1\ #2.\ }\samepage\begingroup\sl}
@@ -20,8 +19,14 @@
 \renewcommand{\@endtheorem}{\endgroup}
 \fi
 
+\RequirePackage{amsthm}
+\RequirePackage{etoolbox}
+\RequirePackage{float}
+
 \def\@title{Укажите заголовок с помощью команды \texttt{\textbackslash title}}
 \def\@subtitle{}
+\def\@lecturer{Лектор не указан}
+\def\@notesauthor{Автор конспекта не указан}
 \def\@date{}
 
 \def\subtitle#1{\def\@subtitle{#1}}
@@ -68,8 +73,28 @@
 \renewcommand{\[}{\begin{equation}}
 \renewcommand{\]}{\end{equation}}
 
-\newtheorem{Theorem}{Теорема}
-\newtheorem{Lemma}{Лемма}
-\newtheorem{Definition}{Определение}
-\newtheorem{Corollary}{Следствие}
-\newenvironment{Proof}{\par\noindent{\bf Доказательство.}}{\hfill$\scriptstyle\blacksquare$}
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+\newtheorem{definition*}{Определение}
+\newtheorem*{problem}{Задача}
+\newtheorem{problem*}{Задача}
+\newtheorem*{example}{Пример}
+\newtheorem{example*}{Пример}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Теорема}
+\newtheorem{theorem*}{Теорема}
+\newtheorem*{lemma}{Лемма}
+\newtheorem{lemma*}{Лемма}
+\newtheorem*{corollary}{Следствие}
+\newtheorem{corollary*}{Следствие}
+\newtheorem*{proposition}{Утверждение}
+\newtheorem{proposition*}{Утверждение}
+\newtheorem*{conjecture}{Гипотеза}
+\newtheorem{conjecture*}{Гипотеза}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+\newtheorem{remark*}{Замечание}
+\newtheorem*{note}{Примечание}
+\newtheorem{note*}{Примечание}
