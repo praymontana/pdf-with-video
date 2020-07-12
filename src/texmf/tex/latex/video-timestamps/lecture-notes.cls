@@ -60,12 +60,12 @@
 \end{tabular}\par
 }
 \ifdefempty{\@date}{}{
-    {\large \lineskip .5em
-    дата лекции:
-    \begin{tabular}[t]{c}
-    \hskip 1em \@date
-    \end{tabular}\par
-    }
+{\large \lineskip .5em
+дата лекции:
+\begin{tabular}[t]{c}
+\hskip 1em \@date
+\end{tabular}\par
+}
 }
 \par\vskip 1.5em
 }
@@ -98,3 +98,10 @@
 \newtheorem{remark*}{Замечание}
 \newtheorem*{note}{Примечание}
 \newtheorem{note*}{Примечание}
+
+% https://tex.stackexchange.com/a/551155/128146
+\def\cleartheorem#1{%
+\expandafter\let\csname#1\endcsname\relax
+\expandafter\let\csname c@#1\endcsname\relax
+}
+\def\cleartheorems#1{ \@for\tname:=#1\do{\cleartheorem\tname} }
