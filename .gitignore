@@ -14,5 +14,4 @@ src/texmf/**/*.synctex.gz
 
 src/**/svg-inkscape
 
-lectures
 dist
