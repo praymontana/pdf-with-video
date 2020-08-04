@@ -8,6 +8,8 @@
 
 \ProcessOptions\relax
 
+\RequirePackage{mmap}
+
 \if@russian
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[utf8]{inputenc}
