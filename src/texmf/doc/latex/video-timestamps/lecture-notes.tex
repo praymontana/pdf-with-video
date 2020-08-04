@@ -215,7 +215,9 @@ ln -s репозиторий/src/texmf/tex/latex/video-timestamps \
 
     Математический режим помимо прочего переходит на отдельный математический шрифт.
     Поэтому важно переходить в этот режим при вводе всех математических объектов.
-    Например, лучше писать \begin{verbatim}Решите уравнение и найдите $x$\end{verbatim} а не \begin{verbatim}Решите уравнение и найдите x\end{verbatim} потому что во втором случае $x$ будет набран неправильным шрифтом.
+    Например, лучше писать \begin{verbatim}Решите уравнение и найдите $x$
+    \end{verbatim} а не \begin{verbatim}Решите уравнение и найдите x
+    \end{verbatim} потому что во втором случае $x$ будет набран неправильным шрифтом.
 
     \subsection{Пробелы в математическом режиме}
     В математическом режиме все введенные пользователем пробелы игнорируются, и правильные пробелы расставляются автоматически.
@@ -225,15 +227,15 @@ ln -s репозиторий/src/texmf/tex/latex/video-timestamps \
     \begin{table}[H]
         \begin{tabular}{|p{0.35\textwidth} | l  | l |}
             \hline
-            Неправильно. Здесь $sin$ это как будто произведение трех переменных                                                                          & \verb|$f(x) = sin(x)$|  & $f(x) = sin(x)$  \\
+            Неправильно. Здесь $sin$ это как будто произведение трех переменных                                                                          & \verb|$f(x) = sin(x)$|       & $f(x) = sin(x)$       \\
             \hline
-            Правильно. Здесь $\sin$ это функция, она набирается прямым шрифтом                                                                           & \verb|$f(x) = \sin(x)$| & $f(x) = \sin(x)$ \\
+            Правильно. Здесь $\sin$ это функция, она набирается прямым шрифтом                                                                           & \verb|$f(x) = \sin(x)$|      & $f(x) = \sin(x)$      \\
             \hline
-            Неправильно. Для операции деления с остатком выбран неправильный оператор \verb|\mod| из пакета amsmath, обратите внимание на длинный пробел & \verb|$10 \mod 3 = 1$|  & $10 \mod 3 = 1$  \\
+            Неправильно. Для операции деления с остатком выбран неправильный оператор \verb|\mod| из пакета amsmath, обратите внимание на длинный пробел & \verb|$10 \mod 3 = 1$|       & $10 \mod 3 = 1$       \\
             \hline
-            Правильно. Для операции деления с остатком выбран оператор \verb|\bmod|, который является бинарным оператором & \verb|$10 \bmod 3 = 1$| & $10 \bmod 3 = 1$ \\
+            Правильно. Для операции деления с остатком выбран оператор \verb|\bmod|, который является бинарным оператором                                & \verb|$10 \bmod 3 = 1$|      & $10 \bmod 3 = 1$      \\
             \hline
-            Кстати, есть еще оператор \verb|\pmod| & \verb|$10 \equiv 1 \pmod 3$| & $10 \equiv 1 \pmod 3$ \\
+            Кстати, есть еще оператор \verb|\pmod|                                                                                                       & \verb|$10 \equiv 1 \pmod 3$| & $10 \equiv 1 \pmod 3$ \\
             \hline
         \end{tabular}
     \end{table}
@@ -243,11 +245,15 @@ ln -s репозиторий/src/texmf/tex/latex/video-timestamps \
     \begin{table}[H]
         \begin{tabular}{|p{0.35\textwidth} | l  | l |}
             \hline
-            Явное умножение & \verb|$x\cdot y$| или \verb|$A\times B$| & $x\cdot y$ или $A\times B$  \\
+            Явное умножение               & \verb|$x\cdot y$| или \verb|$A\times B$|         & $x\cdot y$ или $A\times B$                \\
             \hline
-            Многоточие & \verb|$x_1, x_2, \ldots ,x_n$| & $x_1, x_2, \ldots ,x_n$  \\
+            Многоточие                    & \verb|$x_1, x_2, \ldots ,x_n$|                   & $x_1, x_2, \ldots ,x_n$                   \\
             \hline
-            Многоточие по середине строки & \verb|$A_1 \times A_2 \times \cdots \times A_n$| & $A_1 \times A_2 \times \cdots \times A_n$  \\
+            Многоточие по середине строки & \verb|$A_1 \times A_2 \times \cdots \times A_n$| & $A_1 \times A_2 \times \cdots \times A_n$ \\
+            \hline
+            Следствие внутри доказательства & \verb|$x > 1 \implies x > 0$| & $x > 1 \implies x > 0$ \\
+            \hline
+            Равносильность внутри доказательства & \verb|$x > 1 \iff x - 1 > 0$| & $x > 1 \iff x - 1 > 0$ \\
             \hline
         \end{tabular}
     \end{table}
@@ -256,6 +262,10 @@ ln -s репозиторий/src/texmf/tex/latex/video-timestamps \
     по ссылке \url{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}.
     Когда насмотритесь, используйте более короткие и практические списки символов по ссылкам:
     \url{http://webhome.auburn.edu/~tamtiny/Symbols.pdf} или \url{https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols}.
+
+    \subsection{Математические операторы и операции}
+
+
 
     \subsection{Кавычки в русском}
 
@@ -279,7 +289,8 @@ ln -s репозиторий/src/texmf/tex/latex/video-timestamps \
 
     Символ \verb|~| (тильда) используется как неразрывный пробел.
     Его надо ставить перед тире, чтобы тире не оттянулось далеко от предыдущего слова и не перенеслось на следующую строку:
-    \begin{verbatim}Число~--- это когда чего-то несколько.\end{verbatim}
+    \begin{verbatim}Число~--- это когда чего-то несколько.
+    \end{verbatim}
     Аналогично, его надо ставить перед указанием номера рисунка, ссылкой и т.п.: \verb|рисунок~\ref{fig:1}|.
 
     \subsection{Теоремы, замечания, доказательства}
