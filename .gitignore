@@ -14,4 +14,11 @@ src/texmf/**/*.synctex.gz
 
 src/**/svg-inkscape
 
+lectures/
+lectures/**/*.log
+lectures/**/*.aux
+lectures/**/*.out
+lectures/**/*.synctex.gz
+
+
 dist

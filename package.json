@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ipo-kio/pdf-with-video#readme",
   "devDependencies": {
-    "@types/pdfjs-dist": "^2.1.4",
+    "@types/pdfjs-dist": "^2.1.5",
     "@types/youtube": "0.0.39",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
@@ -34,10 +34,10 @@
     "pdfjs-dist": "^2.4.456",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
-    "terser-webpack-plugin": "^3.0.6",
+    "terser-webpack-plugin": "^3.1.0",
     "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2"
   }
