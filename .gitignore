@@ -1,0 +1,8 @@
+.idea
+src
+out
+node_modules
+
+*.js
+*.log
+*.json
