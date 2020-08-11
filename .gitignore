@@ -1,24 +1,14 @@
-node_modules
-.idea
-out
-src/lectures/**/*.log
-src/lectures/**/*.aux
-src/lectures/**/*.pdf
-src/lectures/**/*.out
-src/lectures/**/*.synctex.gz
+/node_modules
+/.idea
+/out
 
-src/texmf/**/*.log
-src/texmf/**/*.aux
-src/texmf/**/*.out
-src/texmf/**/*.synctex.gz
+/src/**/*.log
+/src/**/*.aux
+/src/**/*.pdf
+/src/**/*.out
+/src/**/*.synctex.gz
+/src/**/svg-inkscape
 
-src/**/svg-inkscape
+/lectures
 
-lectures/
-lectures/**/*.log
-lectures/**/*.aux
-lectures/**/*.out
-lectures/**/*.synctex.gz
-
-
-dist
+/dist
