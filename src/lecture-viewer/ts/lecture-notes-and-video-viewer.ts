@@ -5,6 +5,8 @@ import {load_player_api, VideoPlayer} from "./video-player";
 import {LectureNotes, load_lecture_notes} from "./lecture-notes";
 import {LectureNotesViewer} from "./lecture-notes-viewer";
 
+import "split.js";
+
 document.addEventListener("DOMContentLoaded", ready);
 
 async function ready() {
@@ -23,4 +25,8 @@ async function ready() {
         player,
         'viewerContainer'
     );
+
+    // console.log("splitting", Split);
+    // Split(['#videoPlayerContainer', '#lectureNotesContainer']);
+    console.log('splitting', window);
 }

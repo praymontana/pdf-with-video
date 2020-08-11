@@ -33,6 +33,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "pdfjs-dist": "^2.4.456",
     "sass-loader": "^8.0.2",
+    "split.js": "^1.6.2",
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^3.1.0",
     "ts-loader": "^7.0.5",
@@ -40,5 +41,6 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "dependencies": {}
 }
