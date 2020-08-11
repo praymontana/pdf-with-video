@@ -1,8 +1,12 @@
-.idea
-src
-out
-node_modules
+/.idea
+/src
+/out
+/node_modules
 
 *.js
 *.log
 *.json
+
+/lectures/**/*.aux
+/lectures/**/*.out
+/lectures/**/*.synctex.gz
