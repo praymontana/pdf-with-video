@@ -1,6 +1,5 @@
 \documentclass[russian]{lecture-notes}
 
-\usepackage{cmap}
 \usepackage[final]{graphicx}
 \usepackage{subcaption}
 \usepackage{timestamps}
@@ -32,10 +31,13 @@
 			\[x=b_n2^n + b_{n-1}2^{n-1} + \dots + b_42^4+ b_32^3 + b_22^2+b_12^1+b_0\]	
 			Свойство делиться на $7$ сохранится, если мы уменьшим число на величину, кратную семи, поэтому в этом выражении можно заменить степени двойки их остатками от деления на $7$. Заметим, что остаток от деления $2^3 = 8$ на $7$ равен $1$. Тогда остаток от вдвое большего числа $2^4$ на $7$ можно найти, умножив предыдущий остаток на $2$, аналогично, остаток от деления $2^5$ получается умножением предыдущего остатка на $2$, что дает $4$, дальнейшее умножение на $2$ дает $8$, но, как уже говорилось, можно вместо $8$ взять его остаток от деления на $7$, и мы снова получим $1$, то есть последовательность остатков от деления степеней $2$ на $7$ зациклится (в дальнейшем будем использовать символ $\equiv$, означающий, что у чисел одинаковые остатки)
 			\[x=b_n2^n + b_{n-1}2^{n-1} + \underbrace{\dots + b_4\underset{\equiv 2}{2^4}+ b_3\underset{\equiv 1}{2^3}} + \underbrace{b_2\underset{\equiv 4}{2^2}+b_1\underset{\equiv 2}{2}+b_0\underset{\equiv 1}{1}}_{\text{цикл}}\]
-			Тогда, если \[ b_0 + 2b_1 + 4b_2 + b_3 + 2b_4 + 4b_5 + \ldots \ \divs 7 \Rightarrow x \divs 7 \ (\ast) \]~--- признак делимости на 7 для операций, выполняемых в десятичной системе счисления.
-		\item В двоичной системе полученные на предыдущем шаге коэфициенты $1, 2, 4$~--- степени двойки, следовательно, если рассматривать $(\ast)$ в двоичной системе счисления, коэфициенты $4b_2 + 2b_1 + b_0$ можно записать как $\klas{b_2b_1b_0}$, $4b_5 + 2b_4 + b_3$ можно записать $\klas{b_5b_4b_3}$ и так далее. Получается, что число можно разбить на тройки (если чисел до тройки не хватает, дополнить впереди нулями). А потом сложить эти двоичные числа, и, если сумма будет делиться на $7$, то и $x$ будет делиться на $7$: 
+			Тогда, если 
+			\[
+				b_0 + 2b_1 + 4b_2 + b_3 + 2b_4 + 4b_5 + \ldots \ \divs 7 \implies x \divs 7 \ (\ast) 
+			\]~--- признак делимости на 7 для операций, выполняемых в десятичной системе счисления.
+		\item В двоичной системе полученные на предыдущем шаге коэффициенты $1, 2, 4$~--- степени двойки, следовательно, если рассматривать $(\ast)$ в двоичной системе счисления, коэффициенты $4b_2 + 2b_1 + b_0$ можно записать как $\klas{b_2b_1b_0}$, $4b_5 + 2b_4 + b_3$ можно записать $\klas{b_5b_4b_3}$ и так далее. Получается, что число можно разбить на тройки (если чисел до тройки не хватает, дополнить впереди нулями). А потом сложить эти двоичные числа, и, если сумма будет делиться на $7$, то и $x$ будет делиться на $7$: 
 		\[ 
-			\klas{b_0b_1b_2} + \klas{b_3b_4b_5} + \ldots \divs 7 \Rightarrow x \divs 7 
+			\klas{b_0b_1b_2} + \klas{b_3b_4b_5} + \ldots \divs 7 \implies x \divs 7 
 		\]
 		~--- признак делимости на 7 в двоичной системе счисления.
 	\end{itemize}
@@ -44,9 +46,9 @@
 		Проверим по обоим признакам $35_{10}=100011_2$:
 		\begin{itemize}
 			\item Проверим по десятичному признаку: для этого добавим веса и запишем сумму:
-			\[\underset{4}{1}\underset{2}{0}\underset{1}{0}\underset{4}{0}\underset{2}{1}\underset{1}{1} \Rightarrow 4\cdot1+2\cdot1+1\cdot1=7 \divs 7\]
+			\[\underset{4}{1}\underset{2}{0}\underset{1}{0}\underset{4}{0}\underset{2}{1}\underset{1}{1} \implies 4\cdot1+2\cdot1+1\cdot1=7 \divs 7\]
 			\item Проверим по двоичному признаку, для этого разобьем число на тройки и сложим их вместе:
-			\[\overbrace{100}\overbrace{011} \Rightarrow 100+011=111=7 \divs 7\]
+			\[\overbrace{100}\overbrace{011} \implies 100+011=111=7 \divs 7\]
 		\end{itemize}
 	\end{example}
 \end{problem}
@@ -93,8 +95,6 @@
 		\label{tab:arif2}
 		\begin{tabular}{|c|c|c|}
 			\hline
-			\centering
-			\label{tab:arif2}
 			$\cdot$ & $\klas{0}$ & $\klas{1}$ \\ \hline
 			$\klas{0}$ & $\klas{0}$ & $\klas{0}$ \\ \hline
 			$\klas{1}$ & $\klas{0}$ & $\klas{1}$ \\ 
@@ -172,7 +172,7 @@
 \end{example}
 
 \begin{note}
-	Заметим, что классы вычетов $\klas{2}$ и $\klas{3}$ в $\mathbb{Z}_6$ являются делителями нуля. Это означает, что найдутся такие ненулевые классы, которые при умножении на них дадут класс вычетов 0.  Например, для $\klas{3}$  это классы $\klas{2}$  и $\klas{4}$.
+	Заметим, что классы вычетов $\klas{2}$ и $\klas{3}$ в $\mathbb{Z}_6$ являются делителями нуля. Это означает, что найдутся такие ненулевые классы, которые при умножении на них дадут класс вычетов 0.  Например, для $\klas{3}$ это классы $\klas{2}$ и $\klas{4}$.
 	
 	<<Хорошие>> строчки или столбцы получаются, если число и модуль класса вычета взаимно просты. В этих строках и столбцах встречаются все варианты классов вычетов.
 	
@@ -225,6 +225,7 @@
 
 \begin{problem}
 	\timestamp{39:07}
+	\mbox{}
 	\begin{enumerate}
 		\item Доказать, что если добавить ко всем представителям класса вычетов минусы, они все равно будут образовывать полную систему классов вычетов:
 		\[ \klas{0}, \ \klas{-1}, \ \dots \ , \  \klas{1-m} \]
@@ -251,7 +252,7 @@
 \end{definition}
 
 \begin{theorem}
-	$a \equiv b \pmod m \Leftrightarrow (a-b) \divs{m}$
+	$a \equiv b \pmod m \iff (a-b) \divs{m}$
 \end{theorem}
 
 \begin{proof}
@@ -275,21 +276,21 @@
 	\item 	$\begin{cases}
 				a \equiv b \pmod m \\
 				b \equiv c \pmod m
-			\end{cases} \Rightarrow a \equiv c \pmod m$.
+			\end{cases} \implies a \equiv c \pmod m$.
 			\label{sravn:1}
 	\begin{proof}
-		Числа $a$ и $b$ дают одинаковые остатки при делении на $m$. Обозначим его $r$. Числа $b$ и $c$ тоже дают одинаковые остатки при делении на $m$, но остаток от деления $b$ на $m$ мы уже обозначили $r$, значит остаток деления $c$ на $m$ тоже $r \Rightarrow a \equiv c \pmod m$. Также это свойство можно доказать с помощью свойств делимости.
+		Числа $a$ и $b$ дают одинаковые остатки при делении на $m$. Обозначим его $r$. Числа $b$ и $c$ тоже дают одинаковые остатки при делении на $m$, но остаток от деления $b$ на $m$ мы уже обозначили $r$, значит остаток деления $c$ на $m$ тоже $r \implies a \equiv c \pmod m$. Также это свойство можно доказать с помощью свойств делимости.
 		
 	\end{proof}
 	\item 	\begin{enumerate}
-				\item $a \cdot k \equiv b \cdot k \pmod{m \cdot k} \Leftrightarrow a \equiv b \pmod m$.
+				\item $a \cdot k \equiv b \cdot k \pmod{m \cdot k} \iff a \equiv b \pmod m$.
 				\label{sravn:2}
 				\begin{proof}		
 					По теореме (о сведении сравнения к делимости): 
 					\[
-						a \cdot k \equiv b \cdot k \pmod{m \cdot k} \Leftrightarrow a \cdot k - b \cdot k \divs m \cdot k
+						a \cdot k \equiv b \cdot k \pmod{m \cdot k} \iff a \cdot k - b \cdot k \divs m \cdot k
 					\]
-					Разделим на $k$, чтобы деление было определено в условие в условии надо дописать, что $k \ne 0$. После скоращения получим:
+					Разделим на $k$, чтобы деление было определено в условии надо дописать, что $k \ne 0$. После сокращения получим:
 					\[
 						a - b \divs m
 					\]
@@ -300,18 +301,18 @@
 				\end{proof}
 				Свойство после добавления условия: 
 				\[
-					a \cdot k \equiv b \cdot k \pmod{m \cdot k} \text{ и } k \ne 0 \Leftrightarrow a \equiv b \pmod m
+					a \cdot k \equiv b \cdot k \pmod{m \cdot k} \text{ и } k \ne 0 \iff a \equiv b \pmod m
 				\]
-				\item $a \cdot k \equiv b \cdot k \pmod m \Leftrightarrow a \equiv b \pmod m$. Здесь мы не умножем модуль на $k$. Возможно ли, что и (a) и (b) справедливы одновременно? Давайте проведем доказательство и выясним.
+				\item $a \cdot k \equiv b \cdot k \pmod m \iff a \equiv b \pmod m$. Здесь мы не умножаем модуль на $k$. Возможно ли, что и (a), и (b) справедливы одновременно? Давайте проведем доказательство и выясним.
 				\label{sravn:3}
 				\begin{proof}
 					$\Rightarrow$ По теореме (о сведении сравнения к делимости): 
 					\[
-						a \cdot k \equiv b \cdot k \pmod m \Leftrightarrow (a - b) \cdot k \divs m 
+						a \cdot k \equiv b \cdot k \pmod m \iff (a - b) \cdot k \divs m 
 					\]
 					У нас получилось, что произведение разности и $k$ делится на $m$. Нужно доказать, что разность делится на $m$. Это гарантировано только в одном случае, если $k$ взаимно просто с $m$. При выполнении этого условия:
 					\[
-						(a - b) \cdot k \divs m \Rightarrow a-b \divs m
+						(a - b) \cdot k \divs m \implies a-b \divs m
 					\]
 					а это по теореме то же, что и:
 					\[
@@ -324,10 +325,10 @@
 				\end{proof}
 				Свойство после добавления условия:
 				\[
-					a \cdot k \equiv b \cdot k \pmod m \text{ и } k \text{~--- вз. просто с } m \Rightarrow a \equiv b \pmod m
+					a \cdot k \equiv b \cdot k \pmod m \text{ и } k \text{~--- вз. просто с } m \implies a \equiv b \pmod m
 				\]
 				\[
-					a \equiv b \pmod m \Rightarrow a \cdot k \equiv b \cdot k \pmod m
+					a \equiv b \pmod m \implies a \cdot k \equiv b \cdot k \pmod m
 				\]
 			\end{enumerate}
 \end{enumerate}
@@ -335,7 +336,7 @@
 \begin{example}
 	$36x \equiv 24y \pmod{64}$ разделим на $4$
 	
-	$9x \equiv 6y\divs 3 \pmod{16}$ (3 взаимно просто с 16)  $\Rightarrow
+	$9x \equiv 6y\divs 3 \pmod{16}$ (3 взаимно просто с 16) $\implies
 	3x \equiv 2y \pmod{16}$
 \end{example}
 
@@ -345,18 +346,18 @@
 	
 	\[ x^2 - y^2 = (x-y) \cdot (x+y) = 10 \]
 	
-	Произведение этих множителей~--- четное число $\Rightarrow$  по крайней мере один из множителей должен быть четным. Но если $x-y$~--- четный, то и $x+y$~--- четный, и наоборот, но 10 не раскладывается на два четных множителя.
+	Произведение этих множителей~--- четное число $\implies$ по крайней мере один из множителей должен быть четным. Но если $x-y$~--- четный, то и $x+y$~--- четный, и наоборот, но 10 не раскладывается на два четных множителя.
 	
-	Переформулируем на язык сравнений: если $x-y \equiv 0 \pmod 2 \Rightarrow \\ \Rightarrow x+y \equiv 0 \pmod 2)$ 
+	Переформулируем на язык сравнений: если $x-y \equiv 0 \pmod 2 \implies x+y \equiv 0 \pmod 2)$ 
 	
-	\[ x-y=x+(-1) \cdot y, \] а $(-1)=1$ по модулю 2 $\Rightarrow (x-y) \equiv (x+y) \equiv 0 \pmod 2$
+	\[ x-y=x+(-1) \cdot y, \] а $(-1)=1$ по модулю 2 $\implies (x-y) \equiv (x+y) \equiv 0 \pmod 2$
 	\label{zad:uravn} 
 \end{problem*}
 
 \begin{problem*}
 	Вывести новые свойства сравнений, чтобы перевести рассуждения из задачи~\ref{zad:uravn} полностью на язык сравнений и доказать:
 	\[
-		x^2 \equiv y^2 \pmod 2 \Rightarrow x^2 \equiv y^2 \pmod 4
+		x^2 \equiv y^2 \pmod 2 \implies x^2 \equiv y^2 \pmod 4
 	\]
 \end{problem*}
 
@@ -426,8 +427,8 @@
 	
 	\begin{proof}
 		От противного: пусть $in$ и $jn$ дают одинаковые остатки ($i \ne j$).
-		\[in \equiv jn \pmod p \Leftrightarrow \text{[ по теореме ]} \Leftrightarrow in - jn \divs p \Leftrightarrow  n \cdot (i - j) \divs p \Rightarrow \]
-		\[ \Rightarrow \text{[ т.к. $n$ не делится на $p$ ]} \Rightarrow (i-j) \divs p \]
+		\[in \equiv jn \pmod p \iff \text{[ по теореме ]} \iff in - jn \divs p \iff  n \cdot (i - j) \divs p \implies \]
+		\[ \implies \text{[ т.к. $n$ не делится на $p$ ]} \implies (i-j) \divs p \]
 		
 		\begin{figure}[H]
 			\centering
@@ -455,7 +456,7 @@
 	$\begin{cases}
 	|i-j|<p \\
 	|i-j| \divs p
-	\end{cases} \Rightarrow i-j=0 \Rightarrow i=j$~--- противоречие!!!
+	\end{cases} \implies i-j=0 \implies i=j$~--- противоречие!!!
 		
 	\end{proof}
 	
@@ -520,19 +521,19 @@
 \begin{remark}[как считать обратное]
 	\timestamp{84:30}
 	\begin{lemma}
-		Если $m$ и $n$~--- взаимопростые, то существует такое $n'$, что $n \cdot n' \equiv 1 \pmod m$.
+		Если $m$ и $n$~--- взаимно простые, то существует такое $n'$, что $n \cdot n' \equiv 1 \pmod m$.
 	\end{lemma}
 	
 	\begin{proof}
 		Доказательство также является алгоритмом нахождения обратного:
 		\[
-			n \cdot n' \equiv 1 \pmod m \Leftrightarrow \text{[по теореме]} \Leftrightarrow n \cdot n' - 1 \divs m
+			n \cdot n' \equiv 1 \pmod m \iff \text{[по теореме]} \iff n \cdot n' - 1 \divs m
 		\]
 		Обозначим $n'$ за $x$. Т.к. $(n \cdot n' - 1)$ делится на $m$, то существует число, обозначим его $y$, такое, что $my = n \cdot n' - 1$, тогда 
 		\[
 			n \cdot x - 1 = m \cdot y
 		\]
-		Пренесем $m \cdot y$ в левую часть:
+		Перенесем $m \cdot y$ в левую часть:
 		\[
 		 	n \cdot x - m \cdot y = 1 
 		\]
